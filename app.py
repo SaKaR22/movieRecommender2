@@ -1,3 +1,4 @@
+from __future__ import annotations
 from pathlib import Path
 from flask import Flask, render_template, request, jsonify, Response, url_for
 from model.recommender import MovieRecommender
