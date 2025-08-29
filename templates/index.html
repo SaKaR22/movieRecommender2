@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Recommender</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <main>
+    <h1>Movie Recommender</h1>
+    <p class="sub">Type a movie and see similar titles — with posters and “why this?” explanations.</p>
+
+    <form id="recommendForm" autocomplete="off">
+      <input id="movieInput" name="movie_title" type="text" placeholder="e.g., The Shining" required />
+      <button type="submit">Recommend</button>
+    </form>
+
+    <!-- Source movie (centered) -->
+    <section id="source" class="hero" style="display:none;">
+      <img id="sourcePoster" class="poster" alt="Poster">
+      <div id="sourceTitle" class="title-under"></div>
+    </section>
+
+    <!-- Recommendations grid -->
+    <section id="recsSection" style="display:none;">
+      <div class="section-heading">Recommendations</div>
+      <div id="recs" class="rec-grid"></div>
+    </section>
+  </main>
+
+  <!-- Shared reasoning modal -->
+  <div id="reasonModal" role="dialog" aria-modal="true">
+    <div id="reasonCard">
+      <div class="modal-head">
+        <strong id="reasonTitle">Why this recommendation?</strong>
+        <button id="reasonClose" class="btn">Close</button>
+      </div>
+      <div id="reasonBody" class="modal-body">Loading…</div>
+    </div>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>

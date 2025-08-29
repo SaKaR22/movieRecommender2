@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Descriptive Visualizations</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <main>
+    <h1>Descriptive Visualizations</h1>
+
+    <div class="grid">
+      <section class="panel wide">
+        <h3 class="title">Genre Confusion Matrix (content classifier)</h3>
+        <img class="viz-img" src="{{ url_for('confusion_png') }}" alt="Genre Confusion Matrix">
+      </section>
+
+      <section class="panel">
+        <h3 class="title">Distribution (auto-selected)</h3>
+        <img class="viz-img" src="{{ url_for('dist_png', metric='soup_len') }}" alt="Distribution histogram">
+      </section>
+
+      <section class="panel wide">
+        <h3 class="title">Similarity Heatmap (sample)</h3>
+        <img class="viz-img" src="{{ url_for('heatmap_png') }}" alt="Similarity heatmap">
+        <p class="muted" style="margin-top:6px;">Labels show every 5 titles for readability.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
